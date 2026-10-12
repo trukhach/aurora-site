@@ -63,7 +63,7 @@
     <a href="#contact">Контакты</a>
   </div>
   <div class="menu__foot">
-    <span>Ежедневно 09:00–18:00, Челябинск</span>
+    <span>Ежедневно 09:00-18:00, Челябинск</span>
     <a href="tel:+79127778484">+7 912 777-84-84</a>
   </div>
 </nav>
@@ -73,6 +73,7 @@
 
   <section class="hero">
     <div class="hero__sheet">
+      <canvas class="aurora-bg" id="aurora-bg" aria-hidden="true"></canvas>
       <figure class="sign" id="sign" aria-label="Логотип Аврора в виде световой вывески">
         <svg viewBox="0 0 3554 1059" aria-hidden="true" focusable="false"><path d="M57.4271 628.109H0C16.1514 597.601 26.919 581.45 39.4812 551.839L209.071 76.2705C218.044 46.6596 220.736 29.6109 224.325 0H310.466L506.077 546.455C517.742 579.655 529.406 595.807 546.455 628.109H438.779C435.19 598.499 433.396 582.347 423.525 553.634L358.92 373.276C233.298 385.839 130.108 463.904 67.2974 572.477C59.2218 594.012 54.7353 615.547 57.4271 628.109ZM353.536 356.228L240.476 42.173L83.4488 515.947C150.746 426.217 241.373 368.79 353.536 356.228Z" fill="currentColor"/>
 <path d="M617.216 568.888V238.682C617.216 214.455 612.729 202.79 605.551 179.46H931.27C1017.41 179.46 1098.17 220.736 1098.17 279.06C1098.17 314.952 1066.76 358.92 1016.51 379.558C1079.32 393.017 1125.98 438.779 1125.98 504.282C1125.98 593.115 1051.51 628.109 967.162 628.109H605.551C612.729 604.78 617.216 593.115 617.216 568.888ZM697.973 197.406V484.542C736.556 421.731 817.313 381.352 924.092 374.174C981.519 366.098 1015.62 330.206 1015.62 279.06C1015.62 233.298 973.443 197.406 931.27 197.406H697.973ZM697.973 610.163H967.162C1011.13 610.163 1043.43 569.785 1043.43 504.282C1043.43 466.596 1022.79 391.222 949.216 391.222H943.833C815.519 394.812 723.994 448.65 697.973 531.201V610.163Z" fill="currentColor"/>
@@ -100,7 +101,8 @@
 <path d="M3332.32 1058.58C3326.45 1058.58 3321.17 1057.27 3316.46 1054.64C3311.75 1051.94 3308.05 1048.24 3305.35 1043.53C3302.65 1038.82 3301.29 1033.5 3301.29 1027.56C3301.29 1021.61 3302.65 1016.29 3305.35 1011.58C3308.05 1006.87 3311.75 1003.21 3316.46 1000.58C3321.17 997.961 3326.45 996.649 3332.32 996.649C3338.18 996.649 3343.47 997.961 3348.18 1000.58C3352.88 1003.21 3356.55 1006.87 3359.17 1011.58C3361.87 1016.29 3363.22 1021.61 3363.22 1027.56C3363.22 1033.5 3361.87 1038.82 3359.17 1043.53C3356.55 1048.24 3352.88 1051.94 3348.18 1054.64C3343.47 1057.27 3338.18 1058.58 3332.32 1058.58ZM3332.32 1051.29C3336.64 1051.29 3340.5 1050.32 3343.89 1048.39C3347.37 1046.39 3350.07 1043.57 3352 1039.94C3353.93 1036.31 3354.89 1032.19 3354.89 1027.56C3354.89 1022.93 3353.93 1018.8 3352 1015.17C3350.07 1011.54 3347.37 1008.76 3343.89 1006.84C3340.5 1004.83 3336.64 1003.83 3332.32 1003.83C3328 1003.83 3324.1 1004.83 3320.63 1006.84C3317.23 1008.76 3314.53 1011.54 3312.52 1015.17C3310.59 1018.8 3309.63 1022.93 3309.63 1027.56C3309.63 1032.19 3310.59 1036.31 3312.52 1039.94C3314.53 1043.57 3317.23 1046.39 3320.63 1048.39C3324.1 1050.32 3328 1051.29 3332.32 1051.29Z" fill="currentColor"/></svg>
       </figure>
       <div class="hero__bar">
-        <p class="hero__lead">Проектируем, производим и монтируем вывески, световые короба и рекламу в Челябинске.</p>
+        <div class="hero__text"><p class="hero__lead">Проектируем, производим и монтируем вывески, световые короба и рекламу в Челябинске.</p>
+          <a class="btn btn--mint" href="#contact">Оставить заявку</a></div>
         <div class="hero__ctrl">
           <span id="sign-clock">Объёмные буквы с подсветкой</span>
           <button class="switch" id="sign-switch" type="button" aria-pressed="false">
@@ -165,45 +167,35 @@
   </section>
 
   <section class="wrap block" id="process" aria-labelledby="process-h">
-    <div class="block__head">
+    <div class="stack-head">
       <h2 id="process-h">Как проходит заказ</h2>
       <p>Пять шагов от первого звонка до включённой вывески. Перед производством вы утверждаете макет.</p>
     </div>
-    <div class="tbl-wrap">
-      <table class="tbl">
-        <thead><tr><th scope="col">Шаг</th><th scope="col">Этап</th><th scope="col">Что делаем</th></tr></thead>
-        <tbody>
-          <tr><td class="num">01</td><td>Заявка</td><td>Вы присылаете фото фасада, размеры и пожелания. Мы перезваниваем и уточняем задачу.</td></tr>
-          <tr><td class="num">02</td><td>Замер</td><td>При необходимости выезжаем на объект, смотрим крепление и подключение к электричеству.</td></tr>
-          <tr><td class="num">03</td><td>Макет</td><td>Показываем вывеску на фото вашего фасада и вносим правки до утверждения.</td></tr>
-          <tr><td class="num">04</td><td>Производство</td><td>Изготавливаем конструкцию по утверждённому макету.</td></tr>
-          <tr><td class="num">05</td><td>Монтаж</td><td>Устанавливаем и подключаем. Старую вывеску демонтируем сами.</td></tr>
-        </tbody>
-      </table>
-    </div>
+    <ol class="flow">
+        <li><h3>Заявка</h3><p>Вы присылаете фото фасада, размеры и пожелания. Мы перезваниваем и уточняем задачу.</p></li>
+        <li><h3>Замер</h3><p>При необходимости выезжаем на объект, смотрим крепление и подключение к электричеству.</p></li>
+        <li><h3>Макет</h3><p>Показываем вывеску на фото вашего фасада и вносим правки до утверждения.</p></li>
+        <li><h3>Производство</h3><p>Изготавливаем конструкцию по утверждённому макету.</p></li>
+        <li><h3>Монтаж</h3><p>Устанавливаем и подключаем. Старую вывеску демонтируем сами.</p></li>
+      </ol>
   </section>
 
   <section class="wrap block" id="price" aria-labelledby="price-h">
-    <div class="block__head">
+    <div class="stack-head">
       <h2 id="price-h">Сколько стоит</h2>
       <p>Цену считаем под конкретный объект. Пришлите фото фасада и примерные размеры, и мы назовём стоимость. Консультация бесплатная.</p>
     </div>
-    <div class="tbl-wrap">
-      <table class="tbl">
-        <thead><tr><th scope="col">От чего зависит</th><th scope="col">Варианты</th></tr></thead>
-        <tbody>
-          <tr><td>Размер</td><td>высота букв, длина вывески, количество элементов</td></tr>
-          <tr><td>Материал</td><td>акрил, ПВХ, композит, металл</td></tr>
-          <tr><td>Подсветка</td><td>лицевая, контражур, без подсветки</td></tr>
-          <tr><td>Монтаж</td><td>высота, тип фасада, демонтаж старой вывески</td></tr>
-        </tbody>
-      </table>
-    </div>
+    <div class="factors">
+        <div class="factor"><h3>Размер</h3><p>высота букв, длина вывески, количество элементов</p></div>
+        <div class="factor"><h3>Материал</h3><p>акрил, ПВХ, композит, металл</p></div>
+        <div class="factor"><h3>Подсветка</h3><p>лицевая, контражур или без подсветки</p></div>
+        <div class="factor"><h3>Монтаж</h3><p>высота, тип фасада, демонтаж старой вывески</p></div>
+      </div>
   </section>
 
   <section class="wrap" id="works" aria-labelledby="works-h">
     <div class="sheet works-sheet">
-      <div class="works-head">
+      <div class="stack-head stack-head--dark">
         <h2 id="works-h">Работы</h2>
         <p class="note">Семь объектов из трёх тысяч. У каждого фото в кружке деталь: так видно, как сделаны торцы, лицевая часть и свечение.</p>
       </div>
@@ -211,23 +203,21 @@
       <figure class="shot">
         <div class="shot__img">
           <img src="assets/works/todes-720.webp" srcset="assets/works/todes-720.webp 720w, assets/works/todes-1280.webp 1280w" sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw" alt="TODES: Объёмные буквы с лицевой подсветкой. Снято в цехе перед монтажом." width="720" height="316" loading="lazy" decoding="async">
-          <span class="lens" aria-hidden="true"><img src="assets/works/todes-detail.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>деталь</span></span>
+          <span class="lens" aria-hidden="true"><img src="assets/works/todes-detail.webp" alt="" width="240" height="240" loading="lazy" decoding="async"></span>
         </div>
         <figcaption class="shot__cap">
-          <span class="shot__num">01</span>
           <div class="shot__text"><h3>TODES</h3><p class="note">Объёмные буквы с лицевой подсветкой. Снято в цехе перед монтажом.</p></div>
-          <ul class="chips"><li class="chip">объёмные буквы</li><li class="chip">подсветка</li></ul>
+          <p class="shot__tags">объёмные буквы, подсветка</p>
         </figcaption>
       </figure>
       <figure class="shot">
         <div class="shot__img">
           <img src="assets/works/rami-720.webp" alt="RÁMI, ресторан: Объёмные буквы на фасаде над входом." width="720" height="960" loading="lazy" decoding="async">
-          <span class="lens" aria-hidden="true"><img src="assets/works/rami-detail.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>деталь</span></span>
+          <span class="lens" aria-hidden="true"><img src="assets/works/rami-detail.webp" alt="" width="240" height="240" loading="lazy" decoding="async"></span>
         </div>
         <figcaption class="shot__cap">
-          <span class="shot__num">02</span>
           <div class="shot__text"><h3>RÁMI, ресторан</h3><p class="note">Объёмные буквы на фасаде над входом.</p></div>
-          <ul class="chips"><li class="chip">фасад</li><li class="chip">объёмные буквы</li></ul>
+          <p class="shot__tags">фасад, объёмные буквы</p>
         </figcaption>
       </figure>
       <figure class="shot">
@@ -235,20 +225,18 @@
           <img src="assets/works/orts-720.webp" alt="ORTS, стоматология: Логотип и надписи на фасаде, табличка у входа." width="464" height="656" loading="lazy" decoding="async">
         </div>
         <figcaption class="shot__cap">
-          <span class="shot__num">03</span>
           <div class="shot__text"><h3>ORTS, стоматология</h3><p class="note">Логотип и надписи на фасаде, табличка у входа.</p></div>
-          <ul class="chips"><li class="chip">фасад</li><li class="chip">навигация</li></ul>
+          <p class="shot__tags">фасад, навигация</p>
         </figcaption>
       </figure>
       <figure class="shot">
         <div class="shot__img">
           <img src="assets/works/novagraft-720.webp" alt="NovaGraft: Объёмные буквы с контражурной подсветкой: свет уходит на стену и рисует ореол." width="720" height="953" loading="lazy" decoding="async">
-          <span class="lens" aria-hidden="true"><img src="assets/works/novagraft-detail.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>деталь</span></span>
+          <span class="lens" aria-hidden="true"><img src="assets/works/novagraft-detail.webp" alt="" width="240" height="240" loading="lazy" decoding="async"></span>
         </div>
         <figcaption class="shot__cap">
-          <span class="shot__num">04</span>
           <div class="shot__text"><h3>NovaGraft</h3><p class="note">Объёмные буквы с контражурной подсветкой: свет уходит на стену и рисует ореол.</p></div>
-          <ul class="chips"><li class="chip">контражур</li><li class="chip">объёмные буквы</li></ul>
+          <p class="shot__tags">контражур, объёмные буквы</p>
         </figcaption>
       </figure>
       <figure class="shot">
@@ -256,20 +244,18 @@
           <img src="assets/works/lash-720.webp" alt="LASH by TASH: Интерьерная вывеска с подсветкой в салоне." width="600" height="800" loading="lazy" decoding="async">
         </div>
         <figcaption class="shot__cap">
-          <span class="shot__num">05</span>
           <div class="shot__text"><h3>LASH by TASH</h3><p class="note">Интерьерная вывеска с подсветкой в салоне.</p></div>
-          <ul class="chips"><li class="chip">интерьер</li><li class="chip">подсветка</li></ul>
+          <p class="shot__tags">интерьер, подсветка</p>
         </figcaption>
       </figure>
       <figure class="shot">
         <div class="shot__img">
           <img src="assets/works/map-720.webp" alt="Челябинская область: Настенное панно-карта с объёмными буквами." width="720" height="960" loading="lazy" decoding="async">
-          <span class="lens" aria-hidden="true"><img src="assets/works/map-detail.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>деталь</span></span>
+          <span class="lens" aria-hidden="true"><img src="assets/works/map-detail.webp" alt="" width="240" height="240" loading="lazy" decoding="async"></span>
         </div>
         <figcaption class="shot__cap">
-          <span class="shot__num">06</span>
           <div class="shot__text"><h3>Челябинская область</h3><p class="note">Настенное панно-карта с объёмными буквами.</p></div>
-          <ul class="chips"><li class="chip">панно</li><li class="chip">интерьер</li></ul>
+          <p class="shot__tags">панно, интерьер</p>
         </figcaption>
       </figure>
       <figure class="shot shot--small">
@@ -277,9 +263,8 @@
           <img src="assets/works/billionaire-720.webp" alt="BILLIONAIRE: Буквы с контражуром на кирпичной стене." width="240" height="320" loading="lazy" decoding="async">
         </div>
         <figcaption class="shot__cap">
-          <span class="shot__num">07</span>
           <div class="shot__text"><h3>BILLIONAIRE</h3><p class="note">Буквы с контражуром на кирпичной стене.</p></div>
-          <ul class="chips"><li class="chip">контражур</li><li class="chip">интерьер</li></ul>
+          <p class="shot__tags">контражур, интерьер</p>
         </figcaption>
       </figure>
       <a class="shot shot--more" href="https://vk.com/id93244038" target="_blank" rel="noopener noreferrer">
@@ -352,7 +337,7 @@
     </div>
     <div class="foot__col">
       <span class="note">Режим работы</span>
-      <ul><li><a href="#contact">Ежедневно 09:00–18:00</a></li></ul>
+      <ul><li><a href="#contact">Ежедневно 09:00-18:00</a></li></ul>
       <p class="note">Челябинск</p>
     </div>
   </div>
